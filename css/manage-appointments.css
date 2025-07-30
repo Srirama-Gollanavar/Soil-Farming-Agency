@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+}
+
+header {
+  background-color: #388e3c;
+  color: white;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-btn {
+  background: white;
+  color: #388e3c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-card {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.appointment-card:last-child {
+  border-bottom: none;
+}
+
+h4 {
+  margin: 0 0 8px;
+}
+
+.status-btns button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status-btns .approve {
+  background: #4caf50;
+  color: white;
+}
+
+.status-btns .reject {
+  background: #f44336;
+  color: white;
+}
+
+.status-btns .pending {
+  background: #ff9800;
+  color: white;
+}
+
+.status-label {
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+/* Sticky footer support */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  /* padding: 15px 10px; */
+  font-size: 0.9rem;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+
+.footer a {
+  color: #a5d6a7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

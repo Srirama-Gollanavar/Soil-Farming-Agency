@@ -1,0 +1,87 @@
+/* Background and layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1580674281381-f7d5fd67fb3f') no-repeat center center/cover;
+  overflow: hidden;
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+  width: 90%;
+  max-width: 700px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #9dfc93;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+/* Cards */
+.role-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.role-card {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(145deg, #74c365, #567d46);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.role-card h2 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.role-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .role-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

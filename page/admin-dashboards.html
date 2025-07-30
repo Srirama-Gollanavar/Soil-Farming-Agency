@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soil Farming Agency | Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/user-panel.css" />
+</head>
+<body>
+  <header>
+    <h1>Soil Farming Agency - Admin Dashboard</h1>
+    <button id="logoutBtn">Logout <a href="/page/admin-login.html"></a></button>
+  </header>
+
+  <main>
+    <section id="welcome-section">
+      <h2>Welcome, Admin!</h2>
+    </section>
+
+    <section id="actions">
+      <div class="card" onclick="navigateTo('soil-info.html')">
+        <h3>Add Soil Info</h3>
+      </div>
+      <div class="card" onclick="navigateTo('add-crop.html')">
+        <h3>Add Crop Details</h3>
+      </div>
+      <div class="card" onclick="navigateTo('manage-appointments.html')">
+        <h3>Manage Appointments</h3>
+      </div>
+      <div class="card" onclick="navigateTo('view-users.html')">
+        <h3>View Registered Users</h3>
+      </div>
+    </section>
+  </main>
+ <footer class="footer">
+  <p>&copy; 2025 Soil Farming Agency. All rights reserved.</p>
+  <p>Contact: <a href="mailto:support@soilfarming.com">support@soilfarming.com</a></p>
+</footer>
+
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="/js/admin-dashboard.js"></script>
+  <script type="module">
+  import { auth } from '/js/firebase-config.js';
+  import { signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+  // ✅ Logout handler
+  document.getElementById("logoutBtn").addEventListener("click", () => {
+    signOut(auth)
+      .then(() => {
+        window.location.href = "home.html";
+      })
+      .catch((error) => {
+        console.error("Logout failed:", error);
+      });
+  });
+
+  // ✅ Page navigation helper
+  window.navigateTo = function(page) {
+    window.location.href = page;
+  };
+</script>
+
+</body>
+</html>

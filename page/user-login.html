@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Login</title>
+  <link rel="stylesheet" href="/css/user-login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>User Login</h1>
+    <form id="userLoginForm">
+      <input type="email" id="userEmail" placeholder="Enter your email" required />
+      <input type="password" id="userPassword" placeholder="Enter your password" required />
+      <button type="submit" id="loginBtn">Login <a href="/page/user-panel.html"></a></button>
+      <p id="userErrorMsg" class="error-msg"></p>
+      <p id="userSuccessMsg" class="success-msg"></p>
+      <p>Don't have an account? <a href="/page/register.html">Register here</a></p>
+
+    </form>
+  </div>
+
+  <script type="module" src="/js/user-login.js"></script>
+  <script>
+  document.getElementById("loginBtn").addEventListener("click", function () {
+    window.location.href = "/page/user-panel.html";
+  });
+</script>
+
+</body>
+</html>

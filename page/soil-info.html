@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soil Information</title>
+  <link rel="stylesheet" href="/css/soil.css" />
+</head>
+<body>
+  <header>
+    <h2>Soil Forming Agency - Soil Information</h2>
+    <a href="/page/admin-dashboards.html" class="dashboard-btn">Go to Dashboard</a>
+  </header>
+  <div class="container">
+    <h2>Soil Information</h2>
+
+    <form id="soilForm" class="card">
+      <input type="text" id="soilType" placeholder="Soil Type" required />
+      <input type="text" id="crop" placeholder="Best Crop for Soil" required />
+      <textarea id="description" placeholder="Description" required></textarea>
+      <button type="submit">Add Soil Info</button>
+    </form>
+
+    <div id="soilList" class="card-list"></div>
+  </div>
+  <footer class="footer">
+  <p>&copy; 2025 Soil Farming Agency. All rights reserved.</p>
+  <p>Contact: <a href="mailto:support@soilfarming.com">support@soilfarming.com</a></p>
+</footer>
+
+  <script type="module" src="/js/soil-info.js"></script>
+</body>
+</html>

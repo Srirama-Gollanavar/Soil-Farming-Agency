@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Soil Farming Agency</title>
+  <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Soil Farming Agency - Register</h2>
+    <form id="registerForm">
+      <input type="text" id="fullName" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <select id="role" required>
+        <option value="" disabled selected>Select Role</option>
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+      </select>
+      <button type="submit">Register</button>
+      <p class="redirect">Already have an account? <a href="/page/home.html" id="loginLink">Login here</a></a></p>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script type="module" src="/js/register.js"></script>
+  <!-- <script>
+  const roleSelect = document.getElementById('role');
+  const loginLink = document.querySelector('.redirect a');
+
+  roleSelect.addEventListener('change', () => {
+    const role = roleSelect.value;
+    if (role === "admin") {
+      loginLink.href = "admin-login.html";
+    } else if (role === "user") {
+      loginLink.href = "user-login.html";
+    }
+  });
+  loginLink.addEventListener('click', (e) => {
+  const selectedRole = roleSelect.value;
+  if (!selectedRole) {
+    e.preventDefault();
+    alert("Please select a role before logging in.");
+  }
+}); -->
+
+</script>
+
+</body>
+</html>

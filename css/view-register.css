@@ -1,0 +1,130 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+  color: #333;
+}
+header {
+  background-color: #388e3c;
+  color: white;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-btn {
+  background: white;
+  color: #388e3c;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Header */
+.main-header {
+  background-color: #4CAF50;
+  padding: 25px 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Main content */
+.content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.content h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  border-left: 5px solid #4CAF50;
+  padding-left: 15px;
+  color: #2e5840;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Individual user card */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  margin-bottom: 8px;
+  color: #4CAF50;
+}
+
+.card p {
+  margin: 6px 0;
+  font-size: 14.5px;
+  color: #555;
+}
+.back-link {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Sticky footer support */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+
+.footer a {
+  color: #a5d6a7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
