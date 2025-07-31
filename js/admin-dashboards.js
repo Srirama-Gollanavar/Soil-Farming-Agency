@@ -16,7 +16,7 @@ const auth = firebase.auth();
 auth.onAuthStateChanged((user) => {
   if (!user) {
     alert("You are not logged in.");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
   } else {
     // You can optionally fetch Firestore user role data here and confirm it's 'admin'
     console.log("Admin logged in:", user.email);
